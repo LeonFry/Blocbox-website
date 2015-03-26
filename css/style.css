@@ -78,12 +78,10 @@ blockquote{ margin: 0; }
 	background-color: #3498DB;
 	padding: 20px 0 0;
 }
-
-.right-nav{
+.right-nav {
 	text-align: right;
 	padding-top: 10px;
 }
-
 .right-nav li{
 	display: inline;
 	list-style: none;
@@ -97,6 +95,26 @@ blockquote{ margin: 0; }
 
 .right-nav li:not(:last-child){ margin-right: 20px; }
 
+/* responsive menu bar */
+@media only screen and (max-width: 400px) {
+	.right-nav li {
+		text-align: center;
+		display: block;
+	}
+	.right-nav li:not(:last-child){ 
+		margin-right: 00px; 
+	}
+	.right-nav a {
+		display: block;
+	}
+	.nav-link {
+		border-radius: 4px;
+		border-style: solid;
+		border-width: 2px;
+		border-color: #ffffff;
+		padding: 8px 15px;
+	}
+}
 .home-splash {
 	background-image: url("../images/splash-home.jpg");
 	background-repeat: no-repeat;
@@ -205,14 +223,31 @@ blockquote{ margin: 0; }
 .splash-text {
 	color: #ffffff;
 }
+/* responsive splash */
+@media only screen and (max-width: 400px) {
+	.splash-left {
+		text-align: center;
+		margin: 0 auto;
+	}
+	.splash-right {
+		position: static;
+		padding: 0 auto;
+		text-align: center;
 
+	}
+	.oval { visibility: hidden;}
+	.line-play { 
+		background-color: transparent;
+		position: static;
+		display: block;
+	}
+}
 .button,
     button,
     input[type="submit"],
     input[type="reset"],
-    input[type="button"] {
+    input[type="button"] {}
 
-}
 .features {
 	background: #ffffff;
   	background: linear-gradient(bottom, #f7f8f8, #ffffff);
