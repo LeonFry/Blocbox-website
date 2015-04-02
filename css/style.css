@@ -49,7 +49,6 @@ blockquote{ margin: 0; }
 }
 .button-splash {
 	width: 270px;
-	height: 45px;
 	background-color: #2ECC71;
 	font-family: 'lato',helvetica, arial, sans-serif;
 	border: none;
@@ -60,12 +59,19 @@ blockquote{ margin: 0; }
 .button:hover{
 	opacity: 0.5;
 }
-
+.left-nav {
+	margin-bottom: 0;
+}
 .nav-link {
+	border-color: #ffffff;
+	border-radius: 4px;
+	border-style: solid;
+	border-width: 2px;
+	color: #ffffff;
 	font-family: 'lato',helvetica, arial, sans-serif;
 	font-size: 16px;
 	font-weight: 300;
-	color: #ffffff;
+	padding: 8px 15px;
 	-webkit-transition: all 0.3s ease-in;
 	-moz-transition: all 0.3s ease-in;
 	-o-transition: all 0.3s ease-in;
@@ -80,39 +86,39 @@ blockquote{ margin: 0; }
 }
 .right-nav {
 	text-align: right;
-	padding-top: 10px;
+	margin-bottom: 0;
 }
 .right-nav li{
 	display: inline;
 	list-style: none;
-	text-align: right;
+	text-align: center;
 }
 
 .right-nav a{
 	color: #FFFFFF;
+	display: block;
 	text-decoration: none;
 }
 
 .right-nav li:not(:last-child){ margin-right: 20px; }
 
-/* responsive menu bar */
-@media only screen and (min-width: 400px) {
+/*________ responsive menu bar ________*/
+@media only screen and (min-width: 600px) {
 	.right-nav li {
-		text-align: center;
-		display: block;
+		display: inline-block;
 	}
 	.right-nav li:not(:last-child){ 
-		margin-right: 00px; 
+		margin-right: 0;	
 	}
 	.right-nav a {
-		display: block;
+		display: static;
 	}
 	.nav-link {
-		border-radius: 4px;
-		border-style: solid;
-		border-width: 2px;
-		border-color: #ffffff;
-		padding: 8px 15px;
+		border-radius: 0;
+		border-style: none;
+		border-width: 0;
+		border-color: transparent;
+		padding: 0px 15px;
 	}
 }
 .home-splash {
@@ -124,26 +130,25 @@ blockquote{ margin: 0; }
 	overflow: hidden;
 }
 .splash-left {
-	margin: 50px;
+	/*margin: 50px;*/
 	display: inline;
 	list-style: none;
-	text-align: left;
+	text-align: center;
 }
 .splash-left a {
-		text-decoration: none;
+	text-decoration: none;
 }
 .splash-right {
 	display: inline;
 	list-style: none;
 	text-align: right;
-	padding-top: 12%;
-	padding-left: 10%;
+	margin-top: 0;
 }
 .splash-right p {
 	color: #ffffff;
 	position: absolute;
-	left: 60px;
-	top: -20px;
+	left: -148px;
+	top: 55px;
 	font-size: 14px;
 }
 .splash-play {
@@ -152,8 +157,11 @@ blockquote{ margin: 0; }
 	background-color: #3498DB;
 	border-radius: 50px 50px 50px 50px;
 	position: relative;
+	margin: 0 auto;
+	margin-bottom: 25px;
 }
 .oval {
+	display: none;
 	width: 100px;
     height: 100px;
     border-radius: 100% / 50%;
@@ -195,6 +203,7 @@ blockquote{ margin: 0; }
 	position: absolute;
 	top: 45px;
 	left: 147px;
+	display: none;
 }
 .arrow-right {
 	width: 0;
@@ -223,31 +232,41 @@ blockquote{ margin: 0; }
 .splash-text {
 	color: #ffffff;
 }
-/* responsive splash */
-@media only screen and (min-width: 400px) {
-	.splash-left {
-		text-align: center;
-		margin: 0 auto;
+/*________ responsive splash ________*/
+@media only screen and (min-width: 600px) {
+	.splash-right {
+		margin-top: 25%;
+		padding-left: 10%;
 	}
+	.splash-left {
+		text-align: left;
+	}
+}
+@media only screen and (min-width: 800px) {
+	.splash-right {
+		margin-top: 12%;
+	}
+	.splash-right p {
+		left: 35px;
+		top: -20px;
+	}
+}
+@media only screen and (min-width: 420px) {
+
 	.splash-right {
 		position: static;
-		padding-left: 30%;
 		text-align: center;
 	}
 	.splash-play {
-		margin-bottom: 25px;
 	}
 	.oval { 
-		visibility: hidden;
-		left: 0;
+		display: inline;
 	}
 	.line-play { 
-		visibility: hidden;
-		background-color: transparent;
-		position: static;
-		display: block;
+		display: inline;
 	}
 }
+/*________ End responseive splash ________*/
 .button,
     button,
     input[type="submit"],
@@ -261,26 +280,34 @@ blockquote{ margin: 0; }
   	background: -moz-linear-gradient(bottom, #f7f8f8, #ffffff);
   	box-shadow: inset 0px 2px 5px #d8d8d8;
   	padding: 40px 0;
+  	text-align: center;
 }
 .feat-icon {
 	width: 51px;
-	height: 51px;
-	padding-top: 5%;
+	height: auto;
+	
 }
-/* Responsive Features */
-@media only screen and (min-width: 400px) {
+/*________ Responsive Features ________*/
+@media only screen and (min-width: 600px) {
 	.features{
-		text-align: center;
+		text-align: left;
 	}
-	.feat-icon {
+	.featre-text {
+		padding-left: 10px;
+	}
+	/*.icon-box {
+		margin-top: 12%;
+		margin-right: 20px;
+	}*/
+	/*.feat-icon {
 		margin-left: 40%;
 		margin-right: 40%;
 		padding-top: 0;
 		margin-top: 30px;
 		margin-bottom: 5px;
-	}
+	}*/
 }
-
+/*________ End Responsive Features ________*/
 .testimonials {
 	background: #ffffff;
   	background: linear-gradient(bottom, #f7f8f8, #ffffff);
@@ -353,6 +380,8 @@ blockquote{ margin: 0; }
 .quote-4 {
 	margin-top: 40px;
 }
+@media only screen and (min-width: 550px) {
+}
 .pricing-box {
 	background-color: #ffffff;
 	margin-top: 20px;
@@ -363,9 +392,16 @@ blockquote{ margin: 0; }
 	list-style: none;
 	font-size: 18px;
 	font-family: 'varela round',helvetica, arial, sans-serif;
+	margin: 5px;
+}
+.price-gap {
+	line-height: 20px;
+	padding-bottom: 20px;
+	padding-top: 20px;
 }
 .month {
 	font-size: 22px;
+	display: inline-block;
 }
 .dollar {
 	font-size: 30px;
@@ -378,16 +414,17 @@ blockquote{ margin: 0; }
 }
 .pricing-box li:last-child {
 	padding-top: 50px;
+	display: inline-block;
 }
 .pricing-box a {
 	text-decoration: none;
-}
-.casual {}
-.professional {
-	margin-top: -3px;
+/*	display: block;*/
 }
 .expert li:last-child {
 	padding-top: 17px;
+}
+.casual li:last-child {
+	padding-top: 13%;
 }
 .pricing-title {
 	background-color: #3498DB;
@@ -399,16 +436,19 @@ blockquote{ margin: 0; }
 	padding: 5px;
 }
 /* responseive pricing */
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 600px) {
 	.professional {
-		margin-top: 20px;
+		margin-top: -3px; 
+		display: inline-block;
 	}
-	.button-splash {
+	.expert {}
+	.casual {}
+	.pricing-box li:last-child {
+		display: inherit;
 	}
 }
-
+/*----- End responsive pricing -----*/
 .foot-logo {
-	background-color: #3497da;
 	padding-left: 40px;
 	padding-right: 40px;
 	padding-top: 25px;
@@ -416,9 +456,8 @@ blockquote{ margin: 0; }
 	display: inline;
 }
 .foot {
-/*	background-color: #9ccbeb;*/
 	background: #9ccbeb;
-	background-image: linear-gradient(90deg, #9ccbeb 79%, #3498DB 79%);
+	background-image: linear-gradient(180deg, #9ccbeb 60%, #3498DB 60%);
 }
 .foot-blue {
 	background-color: #3497da;
@@ -454,31 +493,8 @@ blockquote{ margin: 0; }
 	color: #ffffff;
 }
 /* responseive footer */
-@media only screen and (min-width: 400px){
+@media only screen and (min-width: 600px){
 	.foot {
-		background-image: linear-gradient(180deg, #9ccbeb 60%, #3498DB 60%);
-	}
-	.copyright {
-		background-color: transparent;
-	}
-	.lower-nav {
-		background-color: transparent;
-	}
-	.foot-logo {
-		display: block;
-	}
-}
-@media only screen and (min-width: 750px){
-	.foot {
-		background-image: linear-gradient(180deg, #9ccbeb 60%, #3498DB 60%);
-	}
-	.copyright {
-		background-color: transparent;
-	}
-	.lower-nav {
-		background-color: transparent;
-	}
-	.foot-logo {
-		display: block;
+	background-image: linear-gradient(90deg, #9ccbeb 74%, #3498DB 74%);
 	}
 }
